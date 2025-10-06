@@ -5,9 +5,10 @@ matplotlib
 seaborn
 scikit-learn
 dvc
-cookiecutter-data-science
+cookiecutter
 pytest
 fastapi
+uvicorn
 mlflow
 evidently
 sdv
