@@ -4,7 +4,16 @@ services:
     working_dir: /work
     volumes:
       - ./:/work
-    command: bash -lc "pip install --upgrade pip && pip install -r requirements.txt && tail -f /dev/null"
+    environment:
+      MLFLOW_TRACKING_URI: http://mlflow:9001
+    ports:
+      - "8888:8888"
+    command: bash -lc "\
+      apt-get update && apt-get install -y --no-install-recommends git && \
+      pip install --upgrade pip && \
+      pip install -r requirements.txt && \
+      rm -rf /var/lib/apt/lists/* && \
+      tail -f /dev/null"
 
   mlflow:
     image: python:3.13-slim
