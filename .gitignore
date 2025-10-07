@@ -16,3 +16,6 @@ awscliv2.zip
 .env
 
 aws/
+
+# datasets
+data/raw/*.csv
