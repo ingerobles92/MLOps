@@ -1,15 +1,30 @@
+# === Core Data Science ===
 numpy
 pandas
 scipy
+scikit-learn
 matplotlib
 seaborn
-scikit-learn
-dvc
-cookiecutter
-pytest
-fastapi
-uvicorn
+
+# === MLOps Tools ===
 mlflow
+dvc[s3]           # DVC con soporte para AWS S3
+boto3             # SDK oficial de AWS
+python-dotenv     # Cargar variables de entorno (.env)
+
+# === Experiment Tracking / Validation ===
 evidently
 sdv
 deepchecks
+
+# === Web & Deployment ===
+fastapi
+uvicorn[standard]
+
+# === Dev & Testing ===
+cookiecutter
+pytest
+
+# === Notebook Environment ===
+jupyterlab
+ipykernel
