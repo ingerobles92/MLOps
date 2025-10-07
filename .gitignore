@@ -19,3 +19,50 @@ aws/
 
 # datasets
 data/raw/*.csv
+# --- seguridad / locales ---
+.env
+.mlflow/
+aws/
+awscliv2.zip
+
+# notebooks & python
+*.ipynb_checkpoints/
+__pycache__/
+
+# varios
+*.bak
+.Trash-0/
+# --- seguridad / locales ---
+.env
+.mlflow/
+aws/
+awscliv2.zip
+
+# notebooks & python
+*.ipynb_checkpoints/
+__pycache__/
+
+# varios
+*.bak
+.Trash-0/
+# --- seguridad / locales ---
+.env
+.mlflow/
+aws/
+awscliv2.zip
+
+# notebooks & python
+*.ipynb_checkpoints/
+__pycache__/
+
+# varios
+*.bak
+.Trash-0/
+
+# local only / backups
+*.bak
+.Trash-0/
+
+# local only / backups
+*.bak
+.Trash-0/

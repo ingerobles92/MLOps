@@ -1,6 +1,7 @@
 services:
   mlops-app:
-    image: python:3.13-slim
+    build: .
+    container_name: mlops-app
     working_dir: /work
     volumes:
       - ./:/work
@@ -9,14 +10,12 @@ services:
     ports:
       - "8888:8888"
     command: bash -lc "\
-      apt-get update && apt-get install -y --no-install-recommends git && \
-      pip install --upgrade pip && pip install -r requirements.txt jupyterlab && \
-      rm -rf /var/lib/apt/lists/* && \
-      jupyter lab --ip=0.0.0.0 --no-browser --port 8888 --NotebookApp.token='' --allow-root & \
+      jupyter lab --ip=0.0.0.0 --no-browser --port=8888 --NotebookApp.token='' --allow-root & \
       tail -f /dev/null"
 
   mlflow:
     image: python:3.13-slim
+    container_name: mlflow
     working_dir: /work
     volumes:
       - ./.mlflow:/work/.mlflow
@@ -25,8 +24,8 @@ services:
     ports:
       - "9001:9001"
     command: bash -lc "\
-      pip install --upgrade pip && \
-      pip install mlflow && \
+      pip install --no-cache-dir --upgrade pip && \
+      pip install --no-cache-dir mlflow && \
       mlflow server \
         --host 0.0.0.0 --port 9001 \
         --backend-store-uri sqlite:///./.mlflow/mlflow.db \
