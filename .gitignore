@@ -31,6 +31,7 @@ __pycache__/
 
 # varios
 *.bak
+<<<<<<< Updated upstream
 .Trash-0/
 # --- seguridad / locales ---
 .env
@@ -66,3 +67,12 @@ __pycache__/
 # local only / backups
 *.bak
 .Trash-0/
+=======
+
+# OS trash / temp
+.Trash-*/
+.DS_Store
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+>>>>>>> Stashed changes
