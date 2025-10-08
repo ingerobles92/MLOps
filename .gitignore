@@ -76,3 +76,16 @@ __pycache__/
 .ipynb_checkpoints/
 **/.ipynb_checkpoints/
 >>>>>>> Stashed changes
+
+# backups/editor
+*.bak
+*~
+# OS trash
+.Trash-*/
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+# Creds/CLI (si aplicara)
+aws/
+# Datos crudos (van con DVC)
+data/raw/*.csv
